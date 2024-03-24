@@ -13,19 +13,19 @@ section {
 }
 
 /* ============ layer */
-h1,
+.layer h1,
 h2 {
   text-transform: uppercase;
 }
 
-h2 {
+.layer h2 {
   font-weight: 200;
   font-size: 2em;
 }
 
-h1 {
+.layer h1 {
   line-height: 1;
-  font-size: 11em;
+  font-size: 12em;
   font-weight: 900;
   background-image: url(img1.png);
   background-size: cover;
@@ -58,9 +58,11 @@ section.section2 {
   background-attachment: fixed;
 }
 
-section.section2 h1 {
+.section2 h1 {
   font-size: 40px;
+  color: white;
   padding-bottom: 30px;
+  text-transform: none;
 }
 
 .wrapper {
@@ -96,6 +98,8 @@ section.section2 h1 {
 }
 
 .section3 h1 {
+  font-size: 2em;
+  padding-bottom: 20px;
   color: white;
 }
 
