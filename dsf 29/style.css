@@ -1,0 +1,29 @@
+table,
+th,
+td {
+  border: 1px solid black;
+}
+th,
+td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #d6eeee;
+}
+
+section.pokemon {
+  display: flex;
+}
+
+.card {
+  padding: 10px;
+}
+.card .wrap {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}

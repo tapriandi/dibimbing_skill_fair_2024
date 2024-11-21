@@ -5,36 +5,54 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
 section {
-  height: 300vh;
-  background: url(img1.png);
   background-size: cover;
   background-attachment: fixed;
 }
 
-/* ============ layer */
-.layer h1,
+a {
+  text-decoration: none;
+}
+
+.title {
+  color: white;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+
+/* ============ section 1 */
+.section1 {
+  height: 300vh;
+  background-image: url(./images/img1.png);
+}
+
+/* ============ curtain */
+.curtain h1.mobile {
+  display: none;
+}
+.curtain h1,
 h2 {
   text-transform: uppercase;
 }
 
-.layer h2 {
+.curtain h2 {
   font-weight: 200;
   font-size: 2em;
 }
 
-.layer h1 {
+.curtain h1 {
   line-height: 1;
   font-size: 12em;
   font-weight: 900;
-  background-image: url(img1.png);
+  background-image: url(./images/img1.png);
   background-size: cover;
   background-attachment: fixed;
   background-clip: text;
   color: transparent;
 }
 
-.layer {
+.curtain {
   position: fixed;
   left: 0;
   top: 0;
@@ -49,77 +67,119 @@ h2 {
 }
 
 /* ============ section 2 */
-section.section2 {
-  height: 200vh;
+.section2 {
   padding: 10%;
-  color: white;
-  background: url(img2.png);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.section2 h1 {
-  font-size: 40px;
-  color: white;
-  padding-bottom: 30px;
-  text-transform: none;
+  padding-bottom: 30%;
+  background-image: url(./images/img2.png);
 }
 
 .wrapper {
   position: relative;
   border-radius: 20px;
   padding: 3%;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  gap: 30px 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: #ffffff70;
 }
 
-.wrapper .card {
+.card {
   color: #111;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #ffffffc3;
+  width: 49%;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.wrapper .card img {
+.card img {
   width: 100%;
   transition: 0.3s;
 }
 
-.wrapper .card:hover img {
-  transform: scale(0.95);
+.card:hover img {
+  transform: scale(1.02);
+}
+
+.card figcaption {
+  color: white;
+  transition: 0.3s;
+}
+.card:hover figcaption {
+  color: black;
 }
 
 /* ============ section 3 */
 .section3 {
   padding: 10%;
-  height: 70vh;
+  background-image: url(./images/img1.png);
 }
 
-.section3 h1 {
-  font-size: 2em;
-  padding-bottom: 20px;
-  color: white;
+.contact {
+  width: 45%;
+  padding-bottom: 50px;
 }
-
-.section3 .wrapper p {
-  color: #111;
-}
-
 .mapouter {
   position: relative;
   text-align: right;
-  width: 600px;
-  height: 400px;
+  width: 48%;
 }
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
-  width: 600px;
-  height: 400px;
 }
 .gmap_iframe {
-  width: 600px !important;
+  width: 100% !important;
   height: 400px !important;
+}
+
+/* ============ Responsive */
+
+@media screen and (max-width: 1024px) {
+  .curtain h1 {
+    font-size: 8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section1 {
+    height: 200vh;
+  }
+  .curtain h1.desktop {
+    display: none;
+  }
+  .curtain h1.mobile {
+    display: block;
+  }
+
+  .mapouter, .contact {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section1 {
+    height: 150vh;
+  }
+  .section2 {
+    padding: 20% 3% 50%;
+  }
+  
+  .curtain h1 {
+    font-size: 5em;
+  }
+
+  .wrapper {
+    border-radius: 10px;
+    gap: 20px 1%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+  .section3 {
+    padding: 20% 3%;
+  }
 }
